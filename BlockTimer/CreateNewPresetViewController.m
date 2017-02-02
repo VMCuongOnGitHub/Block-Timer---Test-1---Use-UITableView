@@ -217,10 +217,9 @@
         else if (count == 0){
             if (self.preset) {
                 // Update existing preset
-                
                 [self.preset setValue:presetName forKey:@"presetName"];
                 [self.preset setValue:reminderTime forKey:@"reminderTime"];
-                
+                [self dismissViewControllerAnimated:YES completion:nil];
             }else{
                 AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
                 NSManagedObjectContext *managedObjectContext = appDelegate.managedObjectContext;
@@ -234,6 +233,7 @@
                 if (![managedObjectContext save:&error]) {
                     NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
                 }
+                [self dismissViewControllerAnimated:YES completion:nil];
             }
         }
         // Find 1 data that existed then show alert

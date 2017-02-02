@@ -39,29 +39,18 @@
 - (void)setupUI{
     
     /************* Config *************/
-//    // CenterPoint
-//    float centerPointX = CGRectGetHeight(self.view.frame)/2;
+    // CenterPoint
+    float centerPointX = CGRectGetHeight(self.view.frame)/2;
     float centerPointY = CGRectGetWidth(self.view.frame)/2;
-//
-//    // Button
-//    float fontSizeLabelButton = CGRectGetHeight(self.presetTimerButton.bounds) / 80;
-//    NSLog(@"%f",CGRectGetHeight(self.presetTimerButton.bounds));
-//    // Label
-//    float fontSizeTipLabel = CGRectGetHeight(self.tipView.bounds) / 80;
-//    float fontSizeSloganLabel = CGRectGetHeight(self.sloganLabel.bounds) / 85;
-//    NSLog(@"%f",CGRectGetHeight(self.sloganLabel.frame));
-//    UIFontDescriptor *sloganHightlightStyle = [self.sloganHighlightLabel.font.fontDescriptor fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitItalic | UIFontDescriptorTraitBold];
+    
+    // Button
     
     /************* Decorate View *************/
     // Logo Image
     self.logoBlockTimerImageView.frame = CGRectMake(centerPointY, 8, 13, 21);
     
-    
-    
     // Slogan View
     [AppHelper createWithView:self.sloganView withBackgroundColor:[UIColor colorWithHexString:@"faf9f9"]];
-//    self.sloganLabel.font = [UIFont systemFontOfSize:fontSizeSloganLabel];
-//    self.sloganHighlightLabel.font = [UIFont fontWithDescriptor:sloganHightlightStyle size:fontSizeSloganLabel];
     self.sloganHighlightLabel.textColor = [UIColor colorWithHexString:@"f26a42"];
     
     // Slogan Line
@@ -69,29 +58,21 @@
     
     // PresetTimer Button
     [AppHelper createWithView:self.presetTimerButton withBackgroundColor:[UIColor colorWithHexString:@"ffffff"]];
-//    self.presetTimerButton.titleLabel.font = [UIFont systemFontOfSize:fontSizeLabelButton];
     self.presetTimerButton.titleLabel.tintColor = [UIColor colorWithHexString:@"41ddb2"];
-    //self.presetTimerButton.imageEdgeInsets = UIEdgeInsetsMake(17, 100, 17, 100);
     
     // Schedule Button
     [AppHelper createWithView:self.scheduleButton withBackgroundColor:[UIColor colorWithHexString:@"ffffff"]];
-//    self.scheduleButton.titleLabel.font = [UIFont systemFontOfSize:fontSizeLabelButton];
     self.scheduleButton.titleLabel.tintColor = [UIColor colorWithHexString:@"41ddb2"];
-    //self.scheduleButton.imageEdgeInsets = UIEdgeInsetsMake(17, 100, 17, 100);
-    
+
     // Statistics Button
     [AppHelper createWithView:self.statisticsButton withBackgroundColor:[UIColor colorWithHexString:@"ffffff"]];
-//    self.statisticsButton.titleLabel.font = [UIFont systemFontOfSize:fontSizeLabelButton];
     self.statisticsButton.titleLabel.tintColor = [UIColor colorWithHexString:@"41ddb2"];
-    //self.statisticsButton.imageEdgeInsets = UIEdgeInsetsMake(17, 100, 17, 100);
     
     // Tip View
     [AppHelper createWithView:self.tipView withBackgroundColor:[UIColor colorWithHexString:@"ffffff"]];
-//    self.tipLabel.font = [UIFont systemFontOfSize:fontSizeTipLabel];
-    
+
     // Tip Line
     [AppHelper createWithView:self.tipDecorationLineView withBackgroundColor:[UIColor colorWithHexString:@"adadad"]];
-    
 }
 
 #pragma mark - viewDidLoad

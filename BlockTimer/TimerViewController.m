@@ -52,8 +52,6 @@ static NSString *const TimerMidTableViewCellIdentifier = @"TimerMidTableViewCell
     self.navigationItem.leftBarButtonItem = stopClock;
     [self.timerTableView registerNib:[UINib nibWithNibName:@"TimerMidTableViewCell" bundle:nil] forCellReuseIdentifier:TimerMidTableViewCellIdentifier];
     
-
-    
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     
     // iPhone4/4S
@@ -96,27 +94,7 @@ static NSString *const TimerMidTableViewCellIdentifier = @"TimerMidTableViewCell
         self.remainingLabel.font = [UIFont systemFontOfSize:CGRectGetHeight(self.remainingLabel.frame)/0.9];
         self.remainingTimeLabel.font = [UIFont systemFontOfSize:CGRectGetHeight(self.remainingTimeLabel.frame)/0.8];
     }
-    timerIndex = 0;
-//    if (![timer counting]) {
-//        [timer startWithEndingBlock:^(NSTimeInterval countTime) {
-//            
-//            if (timerIndex == self.blocks.count - 1) {
-//                timerIndex = (int)self.blocks.count - 1;
-//            }else if ((timerIndex < self.blocks.count - 1) && (timerIndex != 0)){
-//                timerIndex++;
-//            }
-//            
-//            Block *blockTimer = (Block *)[self.blocks objectAtIndex:timerIndex];
-//            [timer setCountDownTime:[blockTimer.blockTimeInterval intValue]];
-//            
-//            
-//            
-//            NSLog(@"int %i",timerIndex);
-//            //        [self.timerTableView reloadData];
-//            runningIndexPath = [NSIndexPath indexPathForRow:timerIndex inSection:0];
-//            [self.timerTableView reloadRowsAtIndexPaths:@[runningIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-//        }];
-//    }
+    
     timerIndex = 0;
     _timerTableView.scrollEnabled = YES;
 

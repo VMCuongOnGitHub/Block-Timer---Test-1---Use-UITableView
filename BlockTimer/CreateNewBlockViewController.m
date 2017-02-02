@@ -110,10 +110,6 @@
         [minsArray addObject:strVal];
         [secsArray addObject:strVal];
     }
-
-    
-
-
 }
 
 - (void)viewDidLoad {
@@ -148,7 +144,6 @@
     {
         return [secsArray count];
     }
-    
 }
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
@@ -191,9 +186,6 @@
 - (IBAction)addBlockButtonDidPress:(id)sender {
     NSManagedObjectContext *context = [self managedObjectContext];
     NSDate *currentTime = [NSDate date];
-    
-    
-    
 //    if (self.block) {
 //        // Update existing device
 //        [self.block setValue:self.blockNameTextField.text forKey:@"blockTitle"];
@@ -218,8 +210,6 @@
     [newBlock setValue:interval forKey:@"blockTimeInterval"];
     [newBlock setValue:currentTime forKey:@"createdTime"];
 
-
-    
     [self.preset addBlocksObject:newBlock];
     
     NSError *error = nil;
